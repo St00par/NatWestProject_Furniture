@@ -31,4 +31,9 @@ public class UtilityController {
 	public String read() {
 		return "Read.html";
 	}
+	
+	@GetMapping("/test")
+	public String test() {
+		return "Test.html";
+	}
 }

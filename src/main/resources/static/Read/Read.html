@@ -10,9 +10,12 @@
     <body>
 	<script type="text/javascript">
 	function readFunc() {
+		const body = document.body;
+		const para = document.createElement('p');
+		body.append(para);
         fetch("http://localhost:9002/getAll")
     .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => console.log(data))
 	}
 	</script>
 <form>
