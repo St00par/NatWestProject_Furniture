@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Database Entry</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+    </head>
+
+    <body>
+ <form>
+      <script type="text/javascript">
+      function addFunc() {
+  		console.log("Working");
+  	}</script>
+  	
+ <h1>New Item Into Database:</h1>
+        
+        <fieldset>
+            <legend>Enter new item data here:</legend>
+            <label for="type">Furniture Type</label>
+            <input id="furniture_type" type="text" name="furniture_type">
+        </br>
+            <label for="material">Furniture Material</label>
+            <input type="material" id="furniture_material" name="furniture_material"/>
+        </br> 
+            <label for="cost">Retail Value</label>
+            <input type="cost" id="furniture_cost" name="furniture_cost"/>
+        
+        </fieldset>
+        <input type = "button" onclick = "addFunc()" value="Click here to add this item to the database!">
+ </form>
+    </body>
+</html>

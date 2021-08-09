@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delete Database Entry</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+    </head>
+
+    <body>
+        <form>
+        <script type="text/javascript">
+        function deleteFunc() {
+        	let id = 1; 
+            fetch("http://localhost:9002/delete/1", {  
+                method: 'delete'  
+              })
+              .then((data) => {
+                console.log(`Request succeeded with JSON response ${data}`);
+                
+              })
+              .catch((error) => {
+              
+              });
+        }
+        </script>
+        <h1>Delete Item From Database:</h1>
+        
+        <fieldset>
+            <legend>Enter ID of item to delete:</legend>
+            <label for="id">Furniture ID</label>
+            <input id="furn_id" type="id" name="f_id">
+        </br>
+           
+        
+        </fieldset>
+        <input type = "button" onclick = "deleteFunc()" value="Click here to delete this item from the database!|">
+    </form>
+ 
+    </body>
+</html>

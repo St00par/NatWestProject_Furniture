@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Amend Database</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+    </head>
+
+    <body>
+        <form>
+        <script type="text/javascript">
+        function delFunc() {
+        	
+        	fetch("http://localhost:9002/update{id}", { 
+        	    method: 'post', 
+        	    headers: {
+        	      "Content-type": "application/json" 
+        	    },
+        	    body: JSON.stringify(
+        	      {
+        	        "type": "Hammock",
+        	        "material": "Cloth",
+        	        "cost": 5
+        	      }
+        	    )
+        	  })
+        	  .then(res => res.json())
+        	  .then((data) => alert(`Success ${data}`))
+        	  .catch((error) => alert(`Request failed ${error}`))
+        	  });
+        	  
+        </script>
+        <h1>Update Database Entry:</h1>
+        
+        <fieldset>
+        	<legend>Enter Database ID to amend</legend>
+        	<label for="type">ID</label>
+            <input id="furniture_id" type="id" name="furniture_id">
+        </br>
+            <legend>Enter new data here:</legend>
+            <label for="type">Furniture Type</label>
+            <input id="furniture_type" type="text" name="furniture_type">
+        </br>
+            <label for="material">Furniture Material</label>
+            <input type="material" id="furniture_material" name="furniture_material"/>
+        </br> 
+            <label for="cost">Retail Value</label>
+            <input type="cost" id="furniture_cost" name="furniture_cost"/>
+        </br>   
+        
+        </fieldset>
+        <input type = "button" onclick = "delFunc ()" value="Click here to update data in database!">
+    </form>
+ 
+    </body>
+</html>
