@@ -11,8 +11,8 @@
         <form>
         <script type="text/javascript">
         function deleteFunc() {
-        	let id = 1; 
-            fetch("http://localhost:9002/delete/1", {  
+        	let id = document.getElementsByName("f_id")[0].value; 
+            fetch("http://localhost:9002/delete/"+id, {  
                 method: 'delete'  
               })
               .then((data) => {

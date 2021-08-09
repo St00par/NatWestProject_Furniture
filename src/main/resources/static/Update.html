@@ -10,47 +10,49 @@
     <body>
         <form>
         <script type="text/javascript">
-        function delFunc() {
-        	
-        	fetch("http://localhost:9002/update{id}", { 
-        	    method: 'post', 
+        function updateFunc() {
+        	let id = document.getElementsByName("f_id")[0].value;
+        	let inputType = document.getElementsByName("f_type")[0].value;
+            let inputMat = document.getElementsByName("f_material")[0].value;
+            let inputCost = document.getElementsByName("f_cost")[0].value;
+        	fetch("http://localhost:9002/update/"+id, { 
+        	    method: 'put', 
         	    headers: {
         	      "Content-type": "application/json" 
         	    },
         	    body: JSON.stringify(
         	      {
-        	        "type": "Hammock",
-        	        "material": "Cloth",
-        	        "cost": 5
+        	        "type": inputType,
+        	        "material": inputMat,
+        	        "cost": inputCost
         	      }
         	    )
         	  })
         	  .then(res => res.json())
-        	  .then((data) => alert(`Success ${data}`))
-        	  .catch((error) => alert(`Request failed ${error}`))
-        	  });
-        	  
+        	  .then((data) => console.log(`Request succeeded with JSON response ${data}`))
+    		  .catch((error) => console.log(`Request failed ${error}`))
+        	  }  
         </script>
         <h1>Update Database Entry:</h1>
         
         <fieldset>
         	<legend>Enter Database ID to amend</legend>
         	<label for="type">ID</label>
-            <input id="furniture_id" type="id" name="furniture_id">
+            <input id="furniture_id" type="id" name="f_id">
         </br>
             <legend>Enter new data here:</legend>
             <label for="type">Furniture Type</label>
-            <input id="furniture_type" type="text" name="furniture_type">
+            <input id="furniture_type" type="text" name="f_type">
         </br>
             <label for="material">Furniture Material</label>
-            <input type="material" id="furniture_material" name="furniture_material"/>
+            <input type="material" id="furniture_material" name="f_material"/>
         </br> 
             <label for="cost">Retail Value</label>
-            <input type="cost" id="furniture_cost" name="furniture_cost"/>
+            <input type="cost" id="furniture_cost" name="f_cost"/>
         </br>   
         
         </fieldset>
-        <input type = "button" onclick = "delFunc ()" value="Click here to update data in database!">
+        <input type = "button" onclick = "updateFunc()" value="Click here to update data in database!">
     </form>
  
     </body>

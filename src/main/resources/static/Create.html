@@ -10,7 +10,11 @@
     <body>
  <form>
       <script type="text/javascript">
+      
       function addFunc() {
+    	  let inputType = document.getElementsByName("f_type")[0].value;
+          let inputMat = document.getElementsByName("f_material")[0].value;
+          let inputCost = document.getElementsByName("f_cost")[0].value;
     	  fetch("http://localhost:9002/create", {
     		    method: 'post', 
     		    headers: {
@@ -18,9 +22,9 @@
     		    },
     		    body: JSON.stringify( 
     		      {
-    		        "type": "Chair",
-    		        "material": "Wood",
-    		        "cost": 50.00
+    		        "type": inputType,
+    		        "material": inputMat,
+    		        "cost": inputCost
     		      }
     		    )
     		  })
@@ -34,13 +38,13 @@
         <fieldset>
             <legend>Enter new item data here:</legend>
             <label for="type">Furniture Type</label>
-            <input id="furniture_type" type="text" name="furniture_type">
+            <input id="furniture_type" type="text" name="f_type">
         </br>
             <label for="material">Furniture Material</label>
-            <input type="material" id="furniture_material" name="furniture_material"/>
+            <input type="material" id="furniture_material" name="f_material"/>
         </br> 
             <label for="cost">Retail Value</label>
-            <input type="cost" id="furniture_cost" name="furniture_cost"/>
+            <input type="cost" id="furniture_cost" name="f_cost"/>
         
         </fieldset>
         <input type = "button" onclick = "addFunc()" value="Click here to add this item to the database!">
