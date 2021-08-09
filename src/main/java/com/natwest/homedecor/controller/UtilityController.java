@@ -9,7 +9,7 @@ public class UtilityController {
 	
 	@GetMapping("/home")
 	public String home() {
-		return "index.html";
+		return "Home.html";
 	}
 	
 	@GetMapping("/new")
