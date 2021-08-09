@@ -9,27 +9,27 @@ public class UtilityController {
 	
 	@GetMapping("/home")
 	public String home() {
-		return "Home.html";
+		return "Homepage/Home.html";
 	}
 	
 	@GetMapping("/new")
 	public String create() {
-		return "Create.html";
+		return "Create/Create.html";
 	}
 	
 	@GetMapping("/del")
 	public String delete() {
-		return "Delete.html";
+		return "Delete/Delete.html";
 	}
 	
 	@GetMapping("/upd")
 	public String update() {
-		return "Update.html";
+		return "Update/Update.html";
 	}
 	
 	@GetMapping("/see")
 	public String read() {
-		return "Read.html";
+		return "Read/Read.html";
 	}
 	
 	@GetMapping("/test")
