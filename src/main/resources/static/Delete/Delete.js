@@ -4,8 +4,8 @@ function deleteFunc() {
                 method: 'delete'  
               })
               .then((data) => {
-                console.log(`Request succeeded with JSON response ${data}`);
-                
+                console.log(`Request succeeded with JSON response ${data}`),
+            	alert(`Item Deleted!`)
               })
               .catch((error) => {
               

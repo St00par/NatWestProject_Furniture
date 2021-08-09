@@ -17,6 +17,7 @@ function addFunc() {
     		  })
     		  .then(res => res.json())
     		  .then((data) => console.log(`Request succeeded with JSON response ${data}`))
+    		  .then((data) => alert(`Data Added`))
     		  .catch((error) => console.log(`Request failed ${error}`))
   	}
   

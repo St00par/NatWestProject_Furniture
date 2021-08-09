@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-       <!-- <script src="Read.js"></script> -->
-        <meta charset="UTF-8" />
-        <meta name="viewport" 
-              content="width=device-width, initial-scale=1.0" />
-        <title>Read Database</title>
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="Read/Read.js"></script>
+    <title>Read Database</title>
+</head>
     <body>
-	<script type="text/javascript">
-	function readFunc() {
-		const body = document.body;
-		const para = document.createElement('p');
-		body.append(para);
-        fetch("http://localhost:9002/getAll")
-    .then(response => response.json())
-  .then(data => console.log(data))
-	}
-	</script>
-<form>
-<input type = "button" onclick = "readFunc()" value="Click here to see the database!">
-</form>    
+		<div class = "main"></div>
+			<form>
+				<input type = "button" onclick = "readFunc()" value="Click here to see the database!">
+			</form>    
     </body>
 </html>

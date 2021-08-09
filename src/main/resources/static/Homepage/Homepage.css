@@ -1,0 +1,36 @@
+ 	body {
+    background-image: url('https://c.pxhere.com/photos/3b/c5/smile_cup_coffee_tables_cute_morning-1372647.jpg!d');
+    background-size:cover;
+    background-color: lightblue;
+    opacity: 4.0;
+    width: 1260px;
+    height: 530px;
+    text-align:center;
+    }
+
+    h1 {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    color:darkgreen    
+    }
+
+    h3 {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+    color:midnightblue   
+    }
+
+    p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    color:darkorange
+    }
+
+    img {
+    transition: transform .7s ease-in-out;
+    }
+    img:hover {
+    transform: rotate(360deg);
+    }
