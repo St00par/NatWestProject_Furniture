@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import java.util.function.Supplier;
 import com.natwest.homedecor.persistence.FurnitureDomain;
 import com.natwest.homedecor.persistence.FurnitureRepo;
 
@@ -28,10 +27,6 @@ public class FurnitureService {
 					new FurnitureDomain(3L, "Chair", "Plastic White", 23.99));
 			return listOfFurniture;
 		}	
-			
-		public FurnitureDomain findById(Long id) {
-			return this.repo.findById(id).orElseThrow();
-		}
 		
 		public FurnitureDomain create(FurnitureDomain furniture) {
 			return this.repo.saveAndFlush(furniture);
