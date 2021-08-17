@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-
+import java.util.function.Supplier;
 import com.natwest.homedecor.persistence.FurnitureDomain;
 import com.natwest.homedecor.persistence.FurnitureRepo;
 
