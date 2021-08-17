@@ -37,11 +37,6 @@ import com.natwest.homedecor.service.FurnitureService;
 				return new ResponseEntity<List<FurnitureDomain>>(this.service.readAll(), HttpStatus.OK);
 			}
 			
-			@GetMapping("/findById")
-			public ResponseEntity<FurnitureDomain> findById(@PathVariable("id") Long id) {
-				return new ResponseEntity<FurnitureDomain>(this.service.findById(id), HttpStatus.FOUND);
-			}
-			
 			@PostMapping("/create")
 			public ResponseEntity<FurnitureDomain> create(@RequestBody FurnitureDomain furniture) {
 				return new ResponseEntity<FurnitureDomain>(this.service.create(furniture), HttpStatus.CREATED);
