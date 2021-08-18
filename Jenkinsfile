@@ -1,19 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Clone Repo') {
             steps {
-                //
+                sh git fetch https://github.com/St00par/NatWestProject_Furniture
             }
         }
-        stage('Test') {
+        stage('Build Jar') {
             steps {
-                //
-            }
+                sh 'ls'
+                sh 'cd Home_Decor && ls'
+            	}
         }
-        stage('Deploy') {
+        stage('Run Jar') {
             steps {
-                //
+                sh 'ls'
             }
         }
     }
