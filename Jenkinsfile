@@ -4,13 +4,13 @@ pipeline {
         stage('Clone Repo') {
             steps {
                 sh git fetch https://github.com/St00par/NatWestProject_Furniture
-                }
+            }
         }
-        stage('Build Jar') {
+        stage('Build Pipeline') {
             steps {
                 sh 'ls'
                 sh 'cd Home_Decor && ls'
-            	}
+            }
         }
         stage('Run Jar') {
             steps {
