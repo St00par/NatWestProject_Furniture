@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                sh 'git clone https://github.com/St00par/NatWestProject_Furniture'
+                sh 'git clone git@github.com:St00par/NatWestProject_Furniture.git'
             }
         }
         stage('Build Pipeline') {
