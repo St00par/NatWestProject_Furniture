@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Jar') {
             steps {
-                sh 'mvn clean package -X'
+                sh 'mvn clean package -e'
             }
         }
         stage('Run Jar') {
