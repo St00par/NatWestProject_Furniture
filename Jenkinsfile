@@ -9,7 +9,7 @@ pipeline {
         stage('Build Pipeline') {
             steps {
                 sh 'ls'
-                sh 'cd Home_Decor && ls'
+                sh 'cd NatWestProject_Furniture && ls'
             }
         }
         stage('Run Jar') {
