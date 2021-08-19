@@ -6,7 +6,7 @@ pipeline {
                 sh 'git fetch https://github.com/St00par/NatWestProject_Furniture'
             }
         }
-        stage('Build Jar') {
+        stage('Build My Jar') {
             steps {
                 sh 'mvn clean package -e'
             }
