@@ -3,18 +3,17 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                sh 'git fetch https://github.com/St00par/NatWestProject_Furniture'
+                sh 'git clone https://github.com/St00par/NatWestProject_Furniture'
             }
         }
         stage('Build Pipeline') {
             steps {
-                sh 'ls'
-                sh 'cd NatWestProject_Furniture && ls'
+                sh 'mvn clean package'
             }
         }
         stage('Run Jar') {
             steps {
-                sh 'ls'
+                sh 'java -jar target/HomeDecor-0.0.1-SNAPSHOT.jar'
             }
         }
     }
