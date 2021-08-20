@@ -11,7 +11,7 @@ pipeline {
                 sh 'mvn clean package -e'
             }
         }
-        stage('Run Jar') {
+        stage('Run My Jar') {
             steps {
                 sh 'java -jar target/HomeDecor-0.0.1-SNAPSHOT.jar &'
             }
