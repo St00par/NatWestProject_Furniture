@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                sh 'git fetch https://github.com/St00par/NatWestProject_Furniture'
+                sh 'git clone https://github.com/St00par/NatWestProject_Furniture'
             }
         }
         stage('Build My Jar') {
