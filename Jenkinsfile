@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Clone Repo') {
+        stage('Clone or Fetch Repo') {
             steps {
                 sh 'git fetch https://github.com/St00par/NatWestProject_Furniture'
             }
