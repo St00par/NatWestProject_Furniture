@@ -9,7 +9,6 @@ pipeline {
         stage('Build My Jar') {
             steps {
                 sh 'mvn clean package -e'
-                sh '--illegal-access=permit'
             }
         }
         stage('Run My Jar Jar Binks') {
